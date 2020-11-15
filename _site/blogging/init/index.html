@@ -9,28 +9,32 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>기록하는 블로그</title>
-<meta name="description" content="오늘 배운것을 기록하는 블로그입니다.">
+<!-- begin _includes/seo.html --><title>minimal mistakes 테마를 이용해 github.io 블로그 구축하기 - 기록하는 블로그</title>
+<meta name="description" content="블로그 설정 방법">
 
 
   <meta name="author" content="안병현">
   
+  <meta property="article:author" content="안병현">
+  
 
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="기록하는 블로그">
-<meta property="og:title" content="기록하는 블로그">
-<meta property="og:url" content="http://localhost:4000/">
+<meta property="og:title" content="minimal mistakes 테마를 이용해 github.io 블로그 구축하기">
+<meta property="og:url" content="http://localhost:4000/blogging/init/">
 
 
-  <meta property="og:description" content="오늘 배운것을 기록하는 블로그입니다.">
-
-
-
+  <meta property="og:description" content="블로그 설정 방법">
 
 
 
+
+
+
+
+  <meta property="article:published_time" content="2020-11-15T00:00:00+09:00">
 
 
 
@@ -41,7 +45,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/">
+<link rel="canonical" href="http://localhost:4000/blogging/init/">
 
 
 
@@ -103,7 +107,7 @@
 
   </head>
 
-  <body class="layout--home">
+  <body class="layout--single">
     <nav class="skip-links">
   <h2 class="screen-reader-text">Skip links</h2>
   <ul>
@@ -146,6 +150,42 @@
     <div class="initial-content">
       
 
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/categories/#blogging" itemprop="item"><span itemprop="name">Blogging</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">minimal mistakes 테마를 이용해 github.io 블로그 구축하기</li>
+      
+    
+  </ol>
+</nav>
+
+  
 
 
 <div id="main" role="main">
@@ -270,33 +310,18 @@
 
 
 
-  <div class="archive">
-    
-      <h1 id="page-title" class="page__title"></h1>
-    
-    
-
-<h3 class="archive__subtitle">최근 포스트</h3>
-
-
-
-
-<div class="entries-list">
-  
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="minimal mistakes 테마를 이용해 github.io 블로그 구축하기">
+    <meta itemprop="description" content="블로그 설정 방법">
+    <meta itemprop="datePublished" content="2020-11-15T00:00:00+09:00">
     
 
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
+    <div class="page__inner-wrap">
       
-        <a href="/blogging/init/" rel="permalink">minimal mistakes 테마를 이용해 github.io 블로그 구축하기
-</a>
-      
-    </h2>
-    
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">minimal mistakes 테마를 이용해 github.io 블로그 구축하기
+</h1>
+          
 
   <p class="page__meta">
     
@@ -317,19 +342,105 @@
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">블로그 설정 방법
-</p>
-  </article>
-</div>
+        </header>
+      
 
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#블로그-설정-방법">블로그 설정 방법</a>
+         -  <a href="#블로그-설정을-위해-다음을-참고하였다">블로그 설정을 위해 다음을 참고하였다.</a>
+         {:.}
+     {:.}</li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <h1 id="블로그-설정-방법">블로그 설정 방법</h1>
+
+<p>예전부터 내 블로그를 하나 가지고 싶었다.  마침 프로그래밍 공부를 하고있던 참에 깃 블로그를 하나 만들어 보고 싶었는데 어려울 것 같아서 미뤄두다가 한번 구글링해서 아래 <u>GitHib 블로그 시작하기</u>를 찾았다. 따라해서 내 블로그를 만들었는데 무척이나 쉬어서… 진작 만들걸 후회중이다.</p>
+
+<p>만들기까지는 쉬운데 만들고 이것저것 설정하는게 조금 어려워서 아래 주소로 내가 깃 블로그 설정에 참고하는 사이트를 올려두었다.</p>
+
+<h4 id="블로그-설정을-위해-다음을-참고하였다">블로그 설정을 위해 다음을 참고하였다.</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>minimal-mistakes theme https://github.com/mmistakes/minimal-mistakes 
+
+GitHub 블로그 시작하기 https://honbabzone.com/jekyll/start-gitHubBlog/ 
+
+기본적인 Jekyll 사이트 구조 https://ansohxxn.github.io/blog/jekyll-directory-structure/ 
+</code></pre></div></div>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#blogging" class="page__taxonomy-item" rel="tag">blogging</a>
+    
+    </span>
+  </p>
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-11-15T00:00:00+09:00">November 15, 2020</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=minimal+mistakes+%ED%85%8C%EB%A7%88%EB%A5%BC+%EC%9D%B4%EC%9A%A9%ED%95%B4+github.io+%EB%B8%94%EB%A1%9C%EA%B7%B8+%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0%20http%3A%2F%2Flocalhost%3A4000%2Fblogging%2Finit%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fblogging%2Finit%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fblogging%2Finit%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">참고</h4>
+      <div class="grid__wrapper">
+        
+          
+            
+      </div>
+    </div>
   
 </div>
 
-
-
-
-  </div>
-</div>
     </div>
 
     
