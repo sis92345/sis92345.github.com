@@ -1,10 +1,10 @@
 ---
 title: "Docker를 활용한 Single Broker Kafka 구성"
 categories:
-- Kafka
+  - Kafka
 tag:
-- Docker
-- Kafka
+  - Docker
+  - Kafka
 toc: true
 toc_sticky: true
 ---
