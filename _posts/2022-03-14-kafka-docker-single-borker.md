@@ -17,6 +17,7 @@ Kraft가 아닌 Zookeeper를 사용해서 구현 할 예정입니다.
 
 - zookeeper
 - bitnami/kafka
+- 
 
 # Network 생성
 
@@ -39,6 +40,18 @@ docker run -p 2181:2181 -d --network kafka --name zookeeper zookeeper
 # Broker Container 생성
 
 broker container를 생성합니다.
+
+```shell
+docker run -p 9092:9092 -d --network kafka --name kafka-server-1 \
+        -e ALLOW_PLAINTEXT_LISTENER=yes \
+        -e KAFKA_CFG_ZOOKEEPER_CONNECT=$zookeeper_server \
+        bitnami/kafka
+```
+
+# Kafka UI 생성( KafDoc )
+KafDoc을 사용해서 Kafka를 볼 수 있도록 변경합니다.
+
+![image](https://user-images.githubusercontent.com/68282095/224953695-b1f1cfee-4aa7-4652-910d-be8aa26b664e.png)
 
 ```shell
 docker run -p 9092:9092 -d --network kafka --name kafka-server-1 \
@@ -109,6 +122,14 @@ docker run -p $port_kafka_server_1:$port_kafka_server_1 -d --network $network --
         -e ALLOW_PLAINTEXT_LISTENER=yes \
         -e KAFKA_CFG_ZOOKEEPER_CONNECT=$zookeeper_server \
         bitnami/kafka
+ 
+## MAKE KAFKA UI
+echo " => Make Kafka UI (Kafdrop) "
+docker run -d --rm -p 9000:9000 \
+        --network $network \
+        -e KAFKA_BROKERCONNECT=kafka-server-1:9092 \
+        -e JVM_OPTS="-Xms32M -Xmx64M" \
+        -e SERVER_SERVLET_CONTEXTPATH="/" \        
 ```
 
 ```shell
