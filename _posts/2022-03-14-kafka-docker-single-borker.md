@@ -17,7 +17,7 @@ Kraft가 아닌 Zookeeper를 사용해서 구현 할 예정입니다.
 
 - zookeeper
 - bitnami/kafka
-- 
+- obsidiandynamics/kafdrop
 
 # Network 생성
 
@@ -129,7 +129,8 @@ docker run -d --rm -p 9000:9000 \
         --network $network \
         -e KAFKA_BROKERCONNECT=kafka-server-1:9092 \
         -e JVM_OPTS="-Xms32M -Xmx64M" \
-        -e SERVER_SERVLET_CONTEXTPATH="/" \        
+        -e SERVER_SERVLET_CONTEXTPATH="/" \     
+        obsidiandynamics/kafdrop   
 ```
 
 ```shell
