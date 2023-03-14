@@ -8,7 +8,6 @@ tag:
 toc: true
 toc_sticky: true
 ---
-# Docker를 활용한 Single Broker Kafka 구성
 
 이번에는 Docker Compose없이 Docker를 활용한 kafka Single Broker를 구성해보겠습니다. 
 
