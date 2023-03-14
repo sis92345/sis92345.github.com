@@ -54,10 +54,12 @@ KafDoc을 사용해서 Kafka를 볼 수 있도록 변경합니다.
 ![image](https://user-images.githubusercontent.com/68282095/224953695-b1f1cfee-4aa7-4652-910d-be8aa26b664e.png)
 
 ```shell
-docker run -p 9092:9092 -d --network kafka --name kafka-server-1 \
-        -e ALLOW_PLAINTEXT_LISTENER=yes \
-        -e KAFKA_CFG_ZOOKEEPER_CONNECT=$zookeeper_server \
-        bitnami/kafka
+docker run -d --rm -p 9000:9000 \
+        --network $network \
+        -e KAFKA_BROKERCONNECT=kafka-server-1:9092 \
+        -e JVM_OPTS="-Xms32M -Xmx64M" \
+        -e SERVER_SERVLET_CONTEXTPATH="/" \     
+        obsidiandynamics/kafdrop   
 ```
 
 # Broker Container 생성 확인
